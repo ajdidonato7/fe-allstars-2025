@@ -1,0 +1,26 @@
+env:
+  - name: PGDATABASE
+    value: "databricks_postgres"
+  
+  - name: PGUSER
+    valueFrom: secret
+  
+  - name: PGHOST
+    value: "instance-33607cf0-86c1-4306-a5c3-2464761fa328.database.cloud.databricks.com"
+  
+  - name: PGPORT
+    value: "5432"
+  
+  - name: PGSSLMODE
+    value: "require"
+  
+  - name: PGAPPNAME
+    value: "medical_device_tracker"
+  
+  - name: PGSCHEMA
+    value: "mma"
+  
+  - name: DATABRICKS_TOKEN
+    value: "dapi68c1dbc446a3c74b9cac1af89bf0dcd5"
+
+command: ["python", "app.py"]
